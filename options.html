@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Act: options</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/libs/skylo/skylo.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row" id="settings">
+
+    </div>
+</div>
+
+<script src="assets/libs/jquery/jquery.min.js"></script>
+<script src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/libs/ractive/ractive.min.js"></script>
+<script src="assets/libs/skylo/skylo.js"></script>
+<script src="assets/js/constants.js"></script>
+<script src="assets/js/commons.js"></script>
+<script src="assets/js/persistenceAdapter.js"></script>
+<script src="assets/js/options.js"></script>
+
+<script type="text/ractive" id="tile-intro-template">
+    <div class="col-md-offset-2 col-md-8">
+        <div class="tile-progress tile-primary">
+            <div class="tile-header">
+                <h2>Settings</h2>
+                {{>intro-settings}}
+            </div>
+            <div class="tile-footer">
+                <button class="btn btn-success" on-click="finish-intro" {{#unless workdayStartCorrect && workdayEndCorrect && nameCorrect}}disabled="disabled"{{/unless}}>Save</button>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script type="text/ractive" id="intro-settings">
+
+    <form class="form-horizontal">
+         <div class="form-group">
+            <label for="name" class="col-md-4 control-label">Your name ?</label>
+            <div class="col-md-8">
+                <input type="text" class="form-control" id="name" placeholder="6:30" value={{name}}>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="workdayStart" class="col-md-4 control-label">When does your work day start ? <br/><small>(in h:m, 24 hour time)</small></label>
+            <div class="col-md-8">
+                <input type="text" class="form-control" id="workdayStart" placeholder="6:30" value={{workdayStart}}>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="workdayEnd" class="col-md-4 control-label">When does your work day end ? <br/><small>(in h:m, 24 hour time)</small></label>
+            <div class="col-md-8">
+                <input type="text" class="form-control" id="workdayEnd" placeholder="23:30" value={{workdayEnd}}>
+            </div>
+        </div>
+        <div class=form-group>
+            <label for="focusModeUrls" class="col-md-4 control-label">Which sites would you like to block in focus mode ?<br/><small>Each domain on a new line</small></label>
+            <div class="col-md-8">
+               <textarea id="focusModeUrls" class="form-control" rows="6" style="resize:vertical" value="{{focusModeUrls}}"></textarea>
+            </div>
+        </div>
+    </form>
+
+</script>
+
+
+</body>
+</html>

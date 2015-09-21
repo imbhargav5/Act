@@ -1,0 +1,72 @@
+.tile-progress .tile-header {
+    text-align: center;
+}
+.tile-progress {
+    background: #00a65b;
+    margin-bottom: 20px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+}
+.tile-progress .tile-header {
+    padding: 15px 20px;
+    padding-bottom: 40px;
+}
+.tile-progress .tile-header input{
+    text-align: center;
+}
+.tile-progress .tile-progressbar {
+    height: 5px;
+    background: rgba(0,0,0,0.18);
+    margin: 0;
+}
+.tile-progress .tile-progressbar span {
+    background: #fff;
+}
+.tile-progress .tile-progressbar span {
+    display: block;
+    background: #000;
+    width: 0;
+    height: 100%;
+    -webkit-transition: all 1.5s cubic-bezier(0.230,1.000,0.320,1.000);
+    transition: all 1.5s cubic-bezier(0.230,1.000,0.320,1.000);
+}
+.tile-progress .tile-footer {
+    padding: 10px;
+    text-align: right;
+    background-color: #efefef;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    -webkit-border-radius: 0 0 3px 3px;
+    border-radius: 0 0 3px 3px;
+}
+
+.tile-progress {
+    background-color: #efefef;
+}
+
+#intro {
+    margin-bottom: 15%;
+}
+
+body {
+    background-color: #efefef;
+}
+
+.table {
+    margin-bottom: 0px;
+}
+
+#settings-page{
+    display: block;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    color: black;
+    font-size: 1.5em;
+}
+
+#settings-page i {
+    color: black;
+}
